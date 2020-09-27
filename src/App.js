@@ -31,6 +31,9 @@ export default function App() {
   const [count, setCount] = useState(0)
   
   // 类似 componentDidMount 和 componentDidUpdate
+  // 告诉 React 组件需要在渲染后（包括第一次渲染和每次更新）执行某些操作
+  // 在组件内部调用 useEffect 可以直接调用组件的 state 和 props 变量
+  // 每个 effect 都可以返回一个清除函数
   useEffect(() => {
     document.title = `you click ${count} times`
   })
